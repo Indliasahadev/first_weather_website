@@ -9,6 +9,10 @@ body{
     min-height: 100vh;
 }
 
+div p{
+    color: #444333;
+}
+
 .mainContent{
     flex-grow: 1;
 }

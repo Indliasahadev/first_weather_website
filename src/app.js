@@ -5,6 +5,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 const app = express();
+const port = process.env.PORT || 3000
 
 //setup paths for express config
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -52,20 +53,16 @@ app.get('/weather', (req, res)=>{
 
     geocode(req.query.address, (error, {longitude, latitude, location} = {})=>{
         if(error){
-            console.log('11')
             return res.send({
                 error
             })
         }
         forecast(longitude, latitude, (error, data)=>{
-            console.log('12')
             if(error){
-                console.log('13')
                 return res.send({
                     error
                 })
             }
-            console.log('14 : ', data)
             res.send({
                 forecast : data.forecast,
                 location : location,
@@ -93,6 +90,6 @@ app.get('*', (req, res)=>{
     });
 })
 
-app.listen('3000', ()=>{
-    console.log('Server is up on port 3000');
+app.listen(port, ()=>{
+    console.log('Server is up on port ' + port);
 })
