@@ -1,0 +1,89 @@
+body{
+    color : #666666;
+    max-width: 650px;
+    margin : 0 auto;
+    padding: 0 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.mainContent{
+    flex-grow: 1;
+}
+
+footer{
+    position: relative;
+    margin-top : auto;
+    color : #888888;
+    border-top: 1px solid #cccccc;
+    bottom : 0;
+    width: 87%;
+    padding: 12px 5px;
+    background-color: #eeeeee;
+}
+
+header{
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1{
+    font-size: 35px;
+    margin-bottom: 16px;
+}
+
+header a{
+    color : #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+header a:hover{
+    color: #444333;
+}
+
+.portrait {
+    width: 250px;
+    height: 250px;
+}
+
+input {
+    border : 1px solid #aaaaaa;
+    padding : 7px;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: #222222;
+}
+
+button {
+    cursor: pointer;
+    border : 1px solid #999999;
+    background-color: #bbbbbb;
+    color: whitesmoke;
+    padding: 7px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width : 78px;
+}
+
+button:hover{
+    background-color: #999999;
+}
+
+@media only screen and (min-width : 600px){
+    body{
+        max-width: 95%;
+    }
+    footer{        
+        width: 100%;
+    }
+    .portrait {
+        width: 250px;
+        height: 250px;
+    }
+    button{
+        margin-left: 6px;
+    }
+}
